@@ -347,6 +347,7 @@ def _push_to_datastore(
         return
 
     resource["hash"] = file_hash
+    resource["hash_algorithm"] = "http://spdx.org/rdf/terms#checksumAlgorithm_md5"
 
     fetch_elapsed = time.perf_counter() - timer_start
     logger.info(
